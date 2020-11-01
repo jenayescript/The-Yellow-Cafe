@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+
+:root {
+  --mainOrange: #E2532F;
+  --mainYellow: #DDA033;
+  --mainWhite: #E0D8C3;
+  --mainBlue: #0D97AC;
+  --yellowTrans: rgba(249, 228, 148, 0.5);
+  --mainGrey: rgb(238, 238, 238);
+}
+
+body {
+  font-family: 'Amatic SC', cursive;
+  background: var(--mainWhite);
+  color: var(--mainYellow);
+}
+.navbar-toggler {
+  outline: none !important;
+}
+.toggler-icon {
+  font-size: 2.5rem;
+  color: var(--mainBlue);
+}
+
+.nav-link {
+  color: var(--mainBlue);
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.nav-link:hover {
+  color: var(--mainYellow);
+}
+
+.cart-info__icon {
+  color: var(--mainBlue);
+  cursor: pointer;
+}
+
+.cart-info {
+  border: 0.1rem solid var(--mainBlue);
+  color: var(--mainBlue);
+  border-radius: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+.cart-info:hover {
+  background: var(--mainYellow);
+  border-color: var(--mainBlue);
+  color: var(--mainWhite);
+}
+.cart-info:hover .cart-info__icon {
+  color: var(--mainWhite);
+}
+
+.max-height {
+  min-height: calc(100vh - 76px);
+  background: linear-gradient(var(--yellowTrans), var(--yellowTrans)),
+    url("../img/headerBcg.jpeg") center/cover fixed no-repeat;
+  position: relative;
+}
+
+.container-fluid {
+  background-image: url("../img/flower-5459972_1920\ \(1\).jpg");
+  background-size: cover;
+}
+.banner {
+  color: var(--mainWhite);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  font-size: 100px;
+  
+}
+.banner-title {
+  color: var(--mainWhite);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  font-size: 100px;
+  
+}
+.banner-link {
+  font-size: 1.5rem;
+  color: var(--mainBlue);
+  border: 0.2rem solid var(--mainBlue);
+}
+.banner-link:hover {
+  background: var(--mainBlue);
+  color: var(--mainYellow);
+}
+
+.cart {
+  position: absolute;
+  min-height: 10rem;
+  background: var(--mainWhite);
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.5);
+  width: 0;
+  overflow: hidden;
+}
+.show-cart {
+  width: 18rem;
+  padding: 2rem 1.5rem;
+  transform: rotateY(-360deg);
+}
+.cart-item {
+  transition: all 2s ease-in-out;
+}
+
+.cart-item-remove {
+  color: var(--mainOrange);
+  transition: all 1s ease-in-out;
+}
+.cart-item-remove:hover {
+  transform: scale(1.1);
+  color: var(--mainBlue);
+}
+#cart-item-price {
+  font-size: 0.8rem;
+}
+
+.btn-orange {
+  color: var(--mainOrange) !important;
+  border-color: var(--Orange) !important;
+}
+.btn-blue {
+  color: var(--mainBlue) !important;
+  border-color: var(--mainBlue) !important;
+}
+.btn-blue:hover {
+  color: var(--mainYellow) !important;
+  background: var(--mainBlue) !important;
+}
+.btn-orange:hover {
+  background: var(--mainBlue) !important;
+  color: var(--mainYellow) !important;
+}
+
+.about-img__container {
+  position: relative;
+}
+
+.about-img__container::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: -1.7rem;
+  width: 100%;
+  height: 100%;
+  outline: 0.5rem solid var(--mainYellow);
+  z-index: -1;
+  transition: all 1s ease-in-out;
+}
+.about-img__container:hover:before {
+  top: 0;
+  left: 0;
+}
+
+.store {
+  background: var(--mainGrey);
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.store-img {
+  transition: all 1s ease-in-out;
+}
+.img-container:hover .store-img {
+  transform: scale(1.2);
+}
+.store-item-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  background: var(--mainBlue);
+  border-top-left-radius: 1rem;
+  transition: all 1s ease-in-out;
+  transform: translate(100%, 100%);
+}
+.img-container:hover .store-item-icon {
+  transform: translate(0, 0);
+}
+.store-item-icon:hover {
+  color: var(--mainWhite);
+}
+.store-item-value {
+  color: --mainYellow;
+}
+
+.search-box {
+  background: var(--mainYellow);
+  color: var(--mainBlue);
+}
+
+.lightbox-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6) !important;
+  display: none;
+}
+.show {
+  display: block;
+}
+
+.lightbox-holder {
+  position: relative;
+}
+.lightbox-item {
+  min-height: 80vh;
+  background: url("../img/cake-1.jpeg") center/cover fixed no-repeat;
+  border-radius: 0.3rem;
+}
+.lightbox-close {
+  color: var(--mainOrange);
+  font-size: 3rem;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+.lightbox-close:hover {
+  color: var(--mainYellow);
+}
+
+.lightbox-control {
+  position: absolute;
+  font-size: 4rem;
+  color: var(--mainOrange);
+  transition: all 1s linear;
+  cursor: pointer;
+}
+.lightbox-control:hover {
+  color: var(--mainYellow);
+}
+.btnLeft {
+  top: 50%;
+  left: 0;
+  transform: translateX(-60%);
+}
+.btnRight {
+  top: 50%;
+  right: 0;
+  transform: translateX(60%);
+}
